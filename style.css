@@ -24,7 +24,7 @@ font-style: normal;
 .block {
 display: flex;
   margin: 20px;
-  padding: 20px;
+  padding: 10px;
   background-color: #ffffff;
   text-align: center;
   flex-direction: column;
