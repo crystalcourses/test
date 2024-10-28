@@ -12,8 +12,15 @@ font-style: normal;
 }
  a {
     text-decoration: none;
-    height: 100px;
-    width: 400px;
+    display: flex;
+    width: 50%;
+    max-width: 600px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    text-align: center;
+    flex-direction: column;
+  align-items: center;
  }
 .block {
 display: flex;
@@ -116,5 +123,9 @@ span {
   }
   .button_container {
     width: 90%;
+  }
+  a {
+    width: 90%;
+    margin: 10px;
   }
 }
