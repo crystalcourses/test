@@ -94,6 +94,7 @@ span {
     text-align: left;
     width: 400px;
     color: #5c5c5c;
+    margin-bottom: 5px;
   }
   .block_info span:last-child {
     text-align: left;
