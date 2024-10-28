@@ -114,4 +114,7 @@ span {
   h1 {
     width: auto;
   }
+  .button_container {
+    width: 90%;
+  }
 }
