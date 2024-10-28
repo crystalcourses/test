@@ -10,7 +10,9 @@ font-style: normal;
   padding: 0;
   overflow: hidden;
 }
-
+ a {
+    text-decoration: none;
+ }
 .block {
 display: flex;
   width: 50%;
