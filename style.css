@@ -1,0 +1,90 @@
+body {
+font-family: "IBM Plex Sans", sans-serif;
+font-style: normal;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.block {
+display: flex;
+  width: 50%;
+  max-width: 600px;
+  margin: 20px;
+  padding: 20px;
+  background-color: #ffffff;
+  text-align: center;
+  flex-direction: column;
+align-items: center;
+}
+
+h1 {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    width: 600px;
+}
+.block button {
+    display: flex;
+
+}
+span {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+}
+.button_container {
+    height: 100px;
+    display: flex;
+    align-items: center; /* Выравнивание по вертикали */
+    padding: 10px;
+    background-color: #f4f4f6;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .button_image {
+    width: 60px;
+    height: 50px;
+    padding-right: 10px;
+  }
+
+  .button_text {
+    display: flex;
+    flex-direction: column; /* Текст в два ряда */
+    text-align: left;
+    line-height: 1.2;
+  }
+
+  .button_text span { /* Для каждого текста отдельного стиля */
+    display: block; /* Разрыв строки */
+  }
+
+  .button_text span:first-child { /* Первый текст */
+    font-size: 16px; /* Размер шрифта */
+    color: #000000; /* Цвет текста */
+  }
+
+  .button_text span:last-child { /* Второй текст */
+    font-size: 14px; /* Размер шрифта */
+    color: #5c5c5c;
+  }
+
+
+
+@media screen and (max-width: 768px) {
+  .block {
+    width: 90%;
+    margin: 10px;
+  }
+  h1 {
+    width: auto;
+  }
+}
