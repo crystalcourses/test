@@ -11,24 +11,18 @@ font-style: normal;
   overflow: hidden;
   color: #ffff;
 }
- a {
-    text-decoration: none;
-    height: 100px;
-    width: 400px;
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    background-color: #f4f4f6;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    margin-bottom: 20px;
- }
+ .animated-heading {
+    color: white; /* Начальный цвет - белый */
+    opacity: 0; /* Начальная прозрачность - 0 (невидимый) */
+    transition: all 1s ease-in-out; /* Плавная анимация в течение 1 секунды */
+  }
+  
+  .animated-heading.show {
+    color: black; /* Конечный цвет - черный */
+    opacity: 1; /* Конечная прозрачность - 1 (видимый) */
+  }
 .block {
 display: flex;
-  width: 50%;
-  max-width: 600px;
   margin: 20px;
   padding: 20px;
   background-color: #ffffff;
@@ -115,7 +109,6 @@ span {
     width:400px;
     color: rgb(242, 206, 62);
   }
-
 @media screen and (max-width: 768px) {
   .block {
     width: 95%;
@@ -138,10 +131,6 @@ span {
   }
   .button_container {
     width: 95%;
-  }
-  a {
-    width: 95%;
-    margin: 10px;
   }
 }
 @media screen and (max-width: 395px) {
