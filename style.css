@@ -12,6 +12,8 @@ font-style: normal;
 }
  a {
     text-decoration: none;
+    height: 100px;
+    width: 400px;
  }
 .block {
 display: flex;
