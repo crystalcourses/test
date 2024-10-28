@@ -22,6 +22,18 @@ display: flex;
   flex-direction: column;
 align-items: center;
 }
+.block_info {
+display: flex;
+  width: 50%;
+  max-width: 600px;
+  margin: 20px;
+  padding: 20px;
+  background-color: #ffffff;
+  text-align: center;
+  flex-direction: column;
+align-items: center;
+line-height: 1.2;
+}
 
 h1 {
     font-family: "IBM Plex Sans", sans-serif;
@@ -40,7 +52,7 @@ span {
 }
 .button_container {
     height: 100px;
-    width: 350px;
+    width: 400px;
     display: flex;
     align-items: center; /* Выравнивание по вертикали */
     padding: 10px;
@@ -49,6 +61,7 @@ span {
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
+    margin-bottom: 20px;
   }
 
   .button_image {
@@ -77,8 +90,16 @@ span {
     font-size: 14px; /* Размер шрифта */
     color: #5c5c5c;
   }
-
-
+  .block_info span:first-child {
+    text-align: left;
+    width: 400px;
+    color: #5c5c5c;
+  }
+  .block_info span:last-child {
+    text-align: left;
+    width:400px;
+    color: rgb(242, 206, 62);
+  }
 
 @media screen and (max-width: 768px) {
   .block {
