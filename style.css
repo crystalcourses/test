@@ -111,11 +111,11 @@ span {
   }
 @media screen and (max-width: 768px) {
   .block {
-    width: 95%;
+    width: 98%;
     margin: 10px;
   }
   .block_info {
-    width: 90%;
+    width: 92%;
     margin: 10px;
   }
   .block_info span:first-child {
