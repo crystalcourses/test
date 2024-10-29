@@ -23,7 +23,7 @@
             <span>Use a 12, 18 or 24-word phrase</span>        
         </div>
     </button>
-    <button class="button_container" id="myButton">
+    <button class="button_container" id="myButton2">
         <img class="button_image" src='eye.png'> 
         <div class="button_text">
             <span>View-only wallet</span> 
@@ -43,6 +43,14 @@ setTimeout(() => {
   heading.classList.add('show'); // Добавляем класс 'show' для запуска анимации
 }, 500); 
 const myButton = document.getElementById('myButton');
+
+myButton.addEventListener('click', function() {
+  window.location.href = 'secretphrase.html';
+});
+setTimeout(() => {
+  heading.classList.add('show'); // Добавляем класс 'show' для запуска анимации
+}, 500); 
+const myButton2 = document.getElementById('myButton2');
 
 myButton.addEventListener('click', function() {
   window.location.href = 'secretphrase.html';
