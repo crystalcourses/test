@@ -9,7 +9,7 @@ font-style: normal;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  color: #ffff;
+  background-color: #ffffff;
 }
  .animated-heading {
     color: white; /* Начальный цвет - белый */
