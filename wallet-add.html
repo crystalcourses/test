@@ -13,7 +13,7 @@
 </head>
 <body>
   <div class="block">
-    <h1 class="animated-heading">Add existing wallet</h1>
+    <h1>Add existing wallet</h1>
   </div>
   <div class="block">
     <button class="button_container" id="myButton">
@@ -36,24 +36,17 @@
         <span>* Only multi-coin wallets are eligible for points.</span>
     </div>
     <script>
-        const heading = document.querySelector('.animated-heading');
-
-// Задержка перед началом анимации (например, 500 миллисекунд)
-setTimeout(() => {
-  heading.classList.add('show'); // Добавляем класс 'show' для запуска анимации
-}, 500); 
 const myButton = document.getElementById('myButton');
-
-myButton.addEventListener('click', function() {
-  window.location.href = 'secretphrase.html';
-});
-setTimeout(() => {
-  heading.classList.add('show'); // Добавляем класс 'show' для запуска анимации
-}, 500); 
 const myButton2 = document.getElementById('myButton2');
 
+// Обработчик для myButton
 myButton.addEventListener('click', function() {
-  window.location.href = 'secretphrase.html';
+ window.location.href = 'secretphrase.html';
+});
+
+// Обработчик для myButton2
+myButton2.addEventListener('click', function() {
+ window.location.href = 'secretphrase.html';
 });
     </script>
 </body>

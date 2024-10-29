@@ -11,16 +11,6 @@ font-style: normal;
   overflow: hidden;
   background-color: #ffffff;
 }
- .animated-heading {
-    color: white; /* Начальный цвет - белый */
-    opacity: 0; /* Начальная прозрачность - 0 (невидимый) */
-    transition: all 1s ease-in-out; /* Плавная анимация в течение 1 секунды */
-  }
-  
-  .animated-heading.show {
-    color: black; /* Конечный цвет - черный */
-    opacity: 1; /* Конечная прозрачность - 1 (видимый) */
-  }
 .block {
 display: flex;
   margin: 20px;
