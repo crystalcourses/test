@@ -11,7 +11,7 @@
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&amp;display=swap" rel="stylesheet">
 <title>Three Centered Blocks</title>
 </head>
-<body>
+<body height='100%'>
   <div class="block">
     <svg width="200" height="200" viewBox="0 0 324 378" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M142.068 18.6553L216.301 42.2254L307.466 143.761L194.424 321.457C194.424 321.457 119.412 379.524 52.8919 372.231L26.6027 310.383L142.068 18.6553Z" fill="#0500FF" stroke="#0500FF" stroke-width="1.05934" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -61,16 +61,68 @@
         </div>
     </button>
   </div>
-  <!-- </a> -->
-  <!-- <div class="block">
-    <h2>Text</h2>
-  </div> -->
+  <div class="block">
+    <div class="token_heading">
+      <span class="tokens">Popular tokens</span>
+      <span class="tokens">Last 24H</span>
+    </div>
+<table id="crypto-table">
+  <thead>
+  </thead>
+  <tbody>
+    </tbody>
+</table>
+</div>
     <script>
-    const myButton = document.getElementById('myButton');
+    const cryptoTable = document.getElementById("crypto-table").getElementsByTagName("tbody")[0];
 
-    myButton.addEventListener('click', function() {
-      window.location.href = 'wallet-add.html';
+// Function to get coin image URL from CoinGecko API
+async function getCoinImage(id) {
+  const response = await fetch(`https://api.coingecko.com/api/v3/coins/${id}`);
+  const data = await response.json();
+  return data.image.large;
+}
+
+// Fetch crypto data from CoinGecko API
+fetch("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=5&page=1&sparkline=false")
+  .then(response => response.json())
+  .then(data => {
+    data.forEach(coin => {
+      // Create table row for each coin
+      const row = cryptoTable.insertRow();
+      const coinImageCell = row.insertCell();
+      const coinNameCell = row.insertCell();
+      const priceCell = row.insertCell();
+      const changeCell = row.insertCell();
+
+      // Fill row data
+      coinNameCell.textContent = coin.name;
+      priceCell.textContent = "$" + coin.current_price.toFixed(2);
+      changeCell.textContent = coin.price_change_percentage_24h.toFixed(2) + "%";
+
+      // Add styling based on price change
+      if (coin.price_change_percentage_24h > 0) {
+        changeCell.classList.add("green");
+      } else {
+        changeCell.classList.add("red");
+      }
+
+      // Fetch and display coin image
+      getCoinImage(coin.id)
+        .then(imageUrl => {
+          const image = document.createElement("img");
+          image.src = imageUrl;
+          coinImageCell.appendChild(image);
+        })
+        .catch(error => {
+          console.error("Error fetching coin image:", error);
+        });
     });
+  })
+  .catch(error => {
+    console.error("Error fetching crypto data:", error);
+  });
+
     </script>
 </body>
 </html>
