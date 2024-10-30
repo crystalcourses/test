@@ -40,7 +40,7 @@
             height: 80px;
             border: 10px solid #f0f0f0;
             border-radius: 50%;
-            border-top-color: #3498db;
+            border-top-color: rgb(0,0,234);
             animation: spin 1.2s linear infinite;
             margin-top: 20px;
             opacity: 1;
@@ -76,29 +76,20 @@
 </head>
 <body>
     <div class="container">
+        <image src="icon.jpg" width="400" height="150"></image>
         <h2 id="message">Please wait, checking...</h2>
         <div id="loading-icon" class="loader"></div>
+        <h2 id="message">Verifying your request. Please wait, this may take a few moments.</h2>  
     </div>
     <script>
-        setTimeout(function() {
-            document.getElementById("message").textContent = "Check completed";
-            document.getElementById("loading-icon").classList.remove("loader");
-            document.getElementById("loading-icon").classList.add("success-check");
+  const loadingIcon = document.getElementById("loading-icon");
+  loadingIcon.style.transition = "transform 1s linear"; // Add transition for smoothness
 
-            var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-            svg.setAttribute("viewBox", "0 0 24 24");
-            var path = document.createElementNS("http://www.w3.org/2000/svg", "path");
-            path.setAttribute("d", "M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z");
-            svg.appendChild(path);
-            document.getElementById("loading-icon").appendChild(svg);
-
-            document.getElementById("loading-icon").style.opacity = 1; 
-            document.getElementById("message").style.opacity = 1;
-
-            setTimeout(function() {
-                window.location.href = "index.html";
-            }, 10000); 
-        }, 10000);
+  let angle = 0;
+  setInterval(() => {
+    angle += 360; // Rotate by 360 degrees per iteration
+    loadingIcon.style.transform = `rotate(${angle}deg)`;
+  }, 1000); // Rotate every 1 second
     </script>
 </body>
 </html>

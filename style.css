@@ -11,6 +11,19 @@ font-style: normal;
   overflow: hidden;
   background-color: #ffffff;
 }
+.bodyd {
+font-family: "IBM Plex Sans", sans-serif;
+font-style: normal;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #ffffff;
+}
 .block {
 display: flex;
   margin: 20px;
